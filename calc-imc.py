@@ -50,7 +50,7 @@ def calcular():
         l_resultado_texto['text'] = 'Seu IMC é: Sobrepeso'
 
     elif resultado >= 18.5:
-        l_resultado_texto['text'] = 'Seu IMC é: Peso normal'
+        l_resultado_texto['text'] = 'Seu IMC é: Normal'
 
     else:
         l_resultado_texto['text'] = 'Seu IMC é: Abaixo do peso'
