@@ -35,7 +35,7 @@ def calcular():
 
     imc = peso / (altura/100)**2
 
-    resultado = imc
+    resultado = imc 
 
     if resultado >= 40:
         l_resultado_texto['text'] = 'Seu IMC é: Obesidade grau III ou mórbida'
