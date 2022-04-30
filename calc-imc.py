@@ -1,9 +1,9 @@
-from email.policy import default
 from tkinter import *
+from tkinter import ttk
 
-master = Tk()
-master.title('Calculadora de IMC by DIOGO BENTO')
-master.geometry('490x560+610+153')
-master.resizeble(Widget=1, height=1)
+janela = Tk()
+janela.title('')
+janela.geometry('295x230')
+janela.configure(bg='white')
 
-img_fundo = PhotoImage(file="imagens")
+janela.mainloop()
