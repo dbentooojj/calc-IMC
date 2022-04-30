@@ -33,21 +33,27 @@ def calcular():
     peso = float(e_peso.get())
     altura = float(e_altura.get())
 
-    imc = peso / altura**2
+    imc = peso / (altura/100)**2
 
     resultado = imc
 
-    if resultado < 18.5:
-        l_resultado_texto['text'] = 'O seu IMC é: Abaixo do peso'
+    if resultado >= 40:
+        l_resultado_texto['text'] = 'Seu IMC é: Obesidade grau III ou mórbida'
 
-    elif resultado >= 18.5 and resultado < 25:
-        l_resultado_texto['text'] = 'O seu IMC é: Normal'
+    elif resultado >= 35:
+        l_resultado_texto['text'] = 'Seu IMC é: Obesidade grau II'
 
-    elif resultado >= 25 and resultado <= 30:
-        l_resultado_texto['text'] = 'O seu IMC é: Sobrepeso'
+    elif resultado >= 30:
+        l_resultado_texto['text'] = 'Seu IMC é: Obesidade grau I'
+
+    elif resultado >= 24.9:
+        l_resultado_texto['text'] = 'Seu IMC é: Sobrepeso'
+
+    elif resultado >= 18.5:
+        l_resultado_texto['text'] = 'Seu IMC é: Peso normal'
 
     else:
-        l_resultado_texto['text'] = 'O seu IMC é: Obesidade'
+        l_resultado_texto['text'] = 'Seu IMC é: Abaixo do peso'
 
     l_resultado['text'] = '{:.{}f}'.format(resultado, 2)
 
@@ -71,12 +77,6 @@ l_resultado_texto.place(x=0, y=90)
 
 b_calcular = Button(frame_baixo, command=calcular, text='Calcular', width=34, height=1, overrelief=SOLID, relief='raised', anchor='center', font=('Ivy 10 bold '), bg=co2, fg=co0)
 b_calcular.grid(row=4, column=0, sticky=NSEW, pady=60, padx=5, columnspan=30)
-
-
-
-
-
-
 
 
 janela.mainloop()
